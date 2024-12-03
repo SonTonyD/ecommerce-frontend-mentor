@@ -174,16 +174,6 @@ h2 {
   z-index: 1000;
 }
 
-@media (max-width: 1440px) {
-  .left-nav {
-    gap: 1.5rem;
-  }
-
-  .nav-container {
-    margin-inline: 100px;
-  }
-}
-
 @media (max-width: 1024px) {
   h1 {
     color: hsl(220, 13%, 13%);
@@ -203,25 +193,6 @@ h2 {
     margin-top: 30px;
   }
 
-  .left-nav {
-    display: flex;
-    gap: 0.875rem;
-    align-items: center;
-  }
-
-  .nav-elem {
-    visibility: hidden;
-    width: 0px;
-  }
-
-  .thin-line {
-    visibility: hidden;
-  }
-
-  .icon-menu {
-    visibility: visible;
-  }
-
   .right-side-section {
     margin-inline: 20px;
   }
@@ -238,12 +209,6 @@ h2 {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-
-  .left-nav {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
   }
 
   .product-image {
