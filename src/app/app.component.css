@@ -1,5 +1,283 @@
-.wrapper {
-  width: 900px;
-  margin: 0 auto;
+nav {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 3;
+  background-color: white;
+}
+
+.nav-container {
+  display: grid;
+  gap: 2rem;
+  margin-inline: 300px;
+  margin-top: 30px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-menu {
+  visibility: hidden;
+}
+
+.left-nav {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-elem {
+  cursor: pointer;
+  color: hsl(219, 9%, 45%);
+}
+
+.right-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-image {
+  width: 3rem;
+  height: 3rem;
+}
+
+.thin-line {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+}
+
+h1 {
+  color: hsl(220, 13%, 13%);
+  font-weight: 900;
+  font-size: 48px;
+}
+
+h2 {
+  color: hsl(219, 9%, 45%);
+  font-weight: 700;
+  font-size: 21px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.left-side-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.product-image {
+  width: 30rem;
+  height: 30rem;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.multiple-thumbnail-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.thumbnail-img {
+  border-radius: 25px;
+}
+
+.thumbnail-img:active {
+  border: 3px solid var(--color-primary);
+}
+
+.right-side-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.important-price {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-price {
+  font-size: 32px;
+  font-weight: 700;
+  color: hsl(220, 13%, 13%);
+}
+
+.discount-price {
+  background-color: hsl(220, 13%, 13%);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  padding: 0.5rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.old-price {
+  color: hsl(220, 14%, 75%);
+  font-size: 16px;
+  text-decoration: line-through;
+}
+
+.action-section {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 0.5rem;
+}
+
+.counter {
+  background-color: hsl(223, 64%, 98%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  border-radius: 10px;
+}
+
+.counter-btn {
+  border: none;
+  background-color: transparent;
+  padding: 1rem 1rem;
+  cursor: pointer;
+}
+
+.add-cart-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  border: none;
+  padding: 1rem 1rem;
+  border-radius: 10px;
+
+  background-color: var(--color-primary);
+
+  cursor: pointer;
+}
+
+.add-cart-btn:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1440px) {
+  .left-nav {
+    gap: 1.5rem;
+  }
+
+  .nav-container {
+    margin-inline: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    color: hsl(220, 13%, 13%);
+    font-weight: 900;
+    font-size: 30px;
+  }
+
+  h2 {
+    color: hsl(219, 9%, 45%);
+    font-weight: 700;
+    font-size: 21px;
+  }
+
+  .nav-container {
+    gap: 2rem;
+    margin-inline: 20px;
+    margin-top: 30px;
+  }
+
+  .left-nav {
+    display: flex;
+    gap: 0.875rem;
+    align-items: center;
+  }
+
+  .nav-elem {
+    visibility: hidden;
+    width: 0px;
+  }
+
+  .thin-line {
+    visibility: hidden;
+  }
+
+  .icon-menu {
+    visibility: visible;
+  }
+
+  .right-side-section {
+    margin-inline: 20px;
+  }
+
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .left-nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 0px;
+  }
+
+  .multiple-thumbnail-images {
+    visibility: hidden;
+    height: 0px;
+  }
+
+  .price-section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .action-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }
