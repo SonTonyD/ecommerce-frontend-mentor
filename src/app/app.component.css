@@ -28,7 +28,6 @@ nav {
   display: flex;
   gap: 3rem;
   align-items: center;
-  margin-left: -2.5rem;
 }
 
 .nav-elem {
@@ -68,10 +67,10 @@ h2 {
 }
 
 .flex-center {
-  margin-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .wrapper {
@@ -196,8 +195,6 @@ h2 {
 }
 
 /* Lightbox styles */
-.lightbox-wrapper {
-}
 
 .lightbox {
   position: fixed;
@@ -290,6 +287,7 @@ h2 {
     justify-content: center;
     align-items: flex-start;
     height: auto;
+    margin-top: 0rem;
   }
 
   .content {
