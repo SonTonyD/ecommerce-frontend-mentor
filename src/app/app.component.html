@@ -26,24 +26,12 @@
         <img class="product-image" src="image-product-1.jpg" alt="" />
         <div class="multiple-thumbnail-images">
           <img
+            *ngFor="let image of imagesThumbnail; let i = index"
             class="thumbnail-img"
-            src="image-product-1-thumbnail.jpg"
-            alt=""
-          />
-          <img
-            class="thumbnail-img"
-            src="image-product-2-thumbnail.jpg"
-            alt=""
-          />
-          <img
-            class="thumbnail-img"
-            src="image-product-3-thumbnail.jpg"
-            alt=""
-          />
-          <img
-            class="thumbnail-img"
-            src="image-product-4-thumbnail.jpg"
-            alt=""
+            [src]="image"
+            [class.selected]="selectedImageIndex === i"
+            (click)="selectImage(i)"
+            alt="Image {{ i }}"
           />
         </div>
       </section>
@@ -79,5 +67,29 @@
         </div>
       </section>
     </div>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox-wrapper" *ngIf="lightboxImage" (click)="closeLightbox()">
+  <div class="lightbox">
+    <button
+      class="lightbox-btn"
+      (click)="selectImage(selectedImageIndex - 1)"
+      *ngIf="selectedImageIndex && imagesProduct[selectedImageIndex - 1]"
+    >
+      <
+    </button>
+    <img [src]="lightboxImage" alt="Image sélectionnée" />
+    <button
+      class="lightbox-btn"
+      (click)="selectImage(selectedImageIndex + 1)"
+      *ngIf="
+        selectedImageIndex !== null &&
+        imagesProduct[selectedImageIndex + 1] !== undefined
+      "
+    >
+      >
+    </button>
   </div>
 </div>
